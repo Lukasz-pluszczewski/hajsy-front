@@ -1,0 +1,12 @@
+@import "../variables";
+
+.HomePage {
+  @extend .basePage;
+  .HomePage__header {
+    display: flex;
+    align-items: center;
+    .HomePage__addNewButton {
+      margin-left: $standardSpacing;
+    }
+  }
+}
