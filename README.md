@@ -1,9 +1,11 @@
-# Simple blog app!
+# Simple cash app
+
+NOTE: This repo will most likely not bring you any value.
 
 #### Clone the project
 ```bash
-git clone git@github.com:Lukasz-pluszczewski/blog-app.git
-cd blog-app
+git clone git@github.com:Lukasz-pluszczewski/hajsy-front.git
+cd hajsy-front
 ```
 
 #### Install dependencies
@@ -27,12 +29,3 @@ npm run build
 ```bash
 npm start
 ```
-
-#### API
-
-For the blog to work properly you need working API ([blog-app-api](https://github.com/Lukasz-pluszczewski/blog-app-api)).
-
-To set host, port etc. of the API you can use environment variables:
-```bash
-API_PROTOCOL=https API_HOST=my.api.host API_PORT=80 API_VERSION=1 npm start
-``` 
