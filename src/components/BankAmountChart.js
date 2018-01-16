@@ -25,12 +25,14 @@ class BankAmountChart extends Component {
         date: 0,
         actual: this.props.initial,
         expected: this.props.initial,
+        desired: this.props.initial,
         perDay: results.perDayExpected,
       },
       {
         name: 'Today',
         date: results.now.valueOf() - monthStartTimestamp,
         actual: this.props.tmobile,
+        desired: this.props.tmobile,
         expected: results.expected,
         perDay: results.perDay,
       },
@@ -38,6 +40,7 @@ class BankAmountChart extends Component {
         name: 'Next month',
         date: results.nextMonth.valueOf() - monthStartTimestamp,
         actual: 0 - (results.deficit / results.daysPassed) * results.totalDays,
+        desired: 0,
         expected: 0,
         perDay: results.perDay,
       },
@@ -60,6 +63,7 @@ class BankAmountChart extends Component {
           <ReferenceLine y={0} label="" stroke="red"/>
           <Line type="monotone" dataKey="actual" stroke="#8884d8" />
           <Line type="monotone" dataKey="expected" stroke="#82ca9d" />
+          <Line type="monotone" dataKey="desired" stroke="#ca8282" />
         </LineChart>
       </div>
     );
